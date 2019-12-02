@@ -9,7 +9,7 @@ func _ready():
 	# Top wall
 	_add_wall(Vector2(0, -10), Vector2(1600, 10))
 	# Bottom, covers grass
-	_add_wall(Vector2(0, 900), Vector2(1600, 70))
+	_add_wall(Vector2(0, 900), Vector2(1600, 75))
 
 func _add_wall(position, size):
 	var rect = RectangleShape2D.new()
