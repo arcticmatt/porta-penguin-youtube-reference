@@ -4,7 +4,7 @@ const VELOCITY = -1.5
 var g_texture_width = null
 
 func _ready():
-	g_texture_width = texture.get_size().x
+	g_texture_width = texture.get_size().x * scale.x
 
 func _process(delta):
 	position.x += VELOCITY
