@@ -6,10 +6,11 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	OS.set_current_screen(1)
 	# Top wall
 	_add_wall(Vector2(0, -10), Vector2(1600, 10))
 	# Bottom, covers grass
-	_add_wall(Vector2(0, 900), Vector2(1600, 75))
+	_add_wall(Vector2(0, 900), Vector2(1600, 50))
 
 func _add_wall(position, size):
 	var rect = RectangleShape2D.new()
@@ -21,8 +22,9 @@ func _add_wall(position, size):
 	var collision_object = StaticBody2D.new()
 	collision_object.position = position
 	collision_object.add_child(collision_shape)
+	
 	collision_object.collision_layer = 0
-	collision_object.set_collision_layer_bit(CollisionLayers.Layers.WALLS, true)
+	collision_object.set_collision_layer_bit(CollisionLayers.Layers.WALL, true)
 	collision_object.collision_mask = 0
 	
 	add_child(collision_object)

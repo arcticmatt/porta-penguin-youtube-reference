@@ -1,6 +1,6 @@
 extends Node
 
 enum Layers {
-	WALLS = 0,
+	WALL = 0,
 	PENGUIN = 1,
 }
